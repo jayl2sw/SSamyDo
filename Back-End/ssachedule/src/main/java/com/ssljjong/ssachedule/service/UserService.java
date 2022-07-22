@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:99b1d25168dfef819552513cd736554c1dfc3d23516f3f74e75778af27b042f6
-size 1283
+package com.ssljjong.ssachedule.service;
+
+import com.ssljjong.ssachedule.domain.UserDomain;
+
+public interface UserService {
+    public Boolean checkUser(UserDomain userDomain);
+
+    public Boolean setUserEduInfo(UserDomain userDomain);
+}
