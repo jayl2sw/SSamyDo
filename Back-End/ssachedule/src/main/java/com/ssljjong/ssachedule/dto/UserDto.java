@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1d907c64830c8ff2b5514c0d3fd0b91c92f6db0fa02ea717c7595575c758145e
-size 620
+package com.ssljjong.ssachedule.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter
+@Setter
+@ToString
+@AllArgsConstructor
+@NoArgsConstructor
+public class UserDto {
+    private String userEmail;
+    private int trackId;
+    private String userPw;
+    private String eduEmail;
+    private String eduPw;
+}
