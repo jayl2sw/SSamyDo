@@ -1,27 +1,3 @@
-package com.ssljjong.ssachedule.domain;
-
-import lombok.Getter;
-
-import javax.persistence.*;
-import java.util.Date;
-
-@Entity
-@Getter
-@Table(name = "todo")
-public class Todo {
-
-    @Id @GeneratedValue
-    @Column(name = "todo_id")
-    private Long id;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "channel_id")
-    private Channel channel;
-
-    private String title;
-    private String description;
-    private TodoType type;
-    private Date    duedate;
-    private TodoStatus status;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b4a7b68ff770f9a4c78f1d097524308ee993f1d9823866a216ac7c0546f70cf1
+size 976
