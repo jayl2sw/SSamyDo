@@ -1,3 +1,25 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:27006874907bebbd90501ce4745f3c185e618d34a1e35e139814af20b1ad2315
-size 471
+package com.ssljjong.ssachedule.domain;
+
+import lombok.Getter;
+
+import javax.persistence.*;
+import java.util.Date;
+
+@Entity
+@Getter
+@Table(name = "notice")
+public class Notice {
+
+    @Id @GeneratedValue
+    @Column(name = "notice_id")
+    private int id;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "channel_id")
+    private Channel channel;
+
+    private String title;
+    private String description;
+    private Date date;
+
+}

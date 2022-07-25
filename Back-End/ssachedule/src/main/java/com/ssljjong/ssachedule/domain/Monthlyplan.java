@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b4181417836dda677df9b7c5a16433342b8085af27e2c6242749b5321ce13882
-size 429
+package com.ssljjong.ssachedule.domain;
+
+import lombok.Getter;
+
+import javax.persistence.*;
+import java.util.Date;
+
+@Entity
+@Getter
+@Table(name = "monthlyplan")
+public class Monthlyplan {
+
+    @Id @GeneratedValue
+    @Column(name = "mp_id")
+    private Long id;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Track track;
+
+    private String title;
+    private String type;
+    private Date date;
+
+}
