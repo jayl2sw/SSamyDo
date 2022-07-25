@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:48a7c753ced78c1b09d4e9201977f5e5beb7b1dbe8ef45aa2d546d61d3e11b66
-size 337
+package com.ssljjong.ssachedule.repository;
+
+import com.ssljjong.ssachedule.domain.Todo;
+
+import java.util.Date;
+import java.util.List;
+
+public interface TodoRepository {
+    public  void save(Todo todo);
+    public  Todo findOne(Long id);
+    public List<Todo> findAll();
+
+    public List<Todo> findByDue(Date dueDate);
+}
