@@ -1,23 +1,3 @@
-package com.ssljjong.ssachedule.dto;
-
-import com.ssljjong.ssachedule.entity.TodoType;
-import lombok.Data;
-
-import java.time.LocalDate;
-
-@Data
-public class TodoListDto {
-
-    private Long id;
-    private String title;
-    private TodoType type;
-    private LocalDate dueDate;
-
-
-    public TodoListDto(Long id, String title, TodoType type, LocalDate dueDate) {
-        this.id = id;
-        this.title = title;
-        this.type = type;
-        this.dueDate = dueDate;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c04e76e8e1d8b46b0e6e7ab101247a464fe73b7fc64680127ae84dbfb7bf416c
+size 496
