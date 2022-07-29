@@ -1,12 +1,3 @@
-import { NavigationContainer } from "@react-navigation/native";
-import MyStack from "./src/router/StackNavigater";
-import Main from "./src/screens/Main";
-import styles from "./app.module.css";
-
-export default function App() {
-  return (
-    <NavigationContainer style={styles.back}>
-      <MyStack />
-    </NavigationContainer>
-  );
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b53936137ddc415d4697caf1febed56f84abe7cb18e37f61d03a20cf1c19da41
+size 347
