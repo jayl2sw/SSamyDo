@@ -1,13 +1,3 @@
-package com.ssljjong.ssachedule.repository;
-
-import com.ssljjong.ssachedule.dto.ChannelDto;
-import com.ssljjong.ssachedule.entity.Channel;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
-
-import java.util.List;
-
-public interface ChannelRepository extends JpaRepository<Channel, Long> {
-
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:43dddd28728b2350c45e2783eadd2ae11b52768e2c9ed29b72320341222db525
+size 1279
