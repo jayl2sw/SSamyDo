@@ -1,15 +1,3 @@
-package com.ssljjong.ssachedule.repository;
-
-import com.ssljjong.ssachedule.domain.Lunch;
-import org.springframework.stereotype.Repository;
-
-import java.util.Date;
-import java.util.List;
-
-public interface LunchRepository {
-
-    public void save(Lunch lunch);
-    public List<Lunch> findByDate(Date date);
-    public List<Lunch> findByPeriod(Date start, Date end);
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c37777c02cfa009bcef1cd70b1cc215a9adbfd6733d07930066ac9182bba4b89
+size 853
