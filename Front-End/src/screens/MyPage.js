@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:58942a62eeae6d2eacc2bf12c198eafbe3538d068ad6501ca269ad412f185864
-size 424
+import { View, Text } from "react-native";
+import Alarm from "../components/myPage/Alarm";
+import UserDetail from "../components/myPage/UserDetail";
+import Setting from "../components/myPage/Setting";
+import styles from "../../app.module.css";
+
+export default function MyPage() {
+  return (
+    <View style={styles.center}>
+      <Text>MyPage</Text>
+      <Alarm />
+      <UserDetail />
+      <Setting />
+    </View>
+  );
+}
