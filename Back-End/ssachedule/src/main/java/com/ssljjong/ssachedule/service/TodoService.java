@@ -1,15 +1,3 @@
-package com.ssljjong.ssachedule.service;
-
-import com.ssljjong.ssachedule.entity.Todo;
-import com.ssljjong.ssachedule.entity.UserDomain;
-
-import java.util.Date;
-import java.util.List;
-
-public interface TodoService {
-
-    public List<Todo> findTodos();
-    public List<Todo> findTodayTodo(Date date);
-    public List<Todo> findUserTodo(UserDomain user);
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c382046f7e23f1c71b96b6e5f6632e636d52e7fa1acbefb3d138009a641f5446
+size 620
