@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f3d9d2c67b41d5aea0039138c3a38e7a4d4dbc0cf3d244a52723d26a6de11fd7
-size 328
+import { View, Text } from "react-native";
+import NoticeList from "../components/notice/NoticeList";
+import styles from "../../app.module.css";
+
+export default function Notice({ navigation }) {
+  return (
+    <View style={styles.center}>
+      <Text>Notice</Text>
+      <NoticeList navigation={navigation} />
+    </View>
+  );
+}

@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:75cc3f39d262e4605eedaa1398e98eb1759ebcd86c83df82d075ccef351f5fc4
-size 349
+import { configureStore } from "@reduxjs/toolkit";
+import example from "./example/examSlice";
+import Todo from "./slice/calendar/Todo";
+import TodoList from "./slice/calendar/TodoList";
+
+const store = configureStore({
+  reducer: {
+    example: example.reducer,
+    Todo: Todo.reducer,
+    TodoList: TodoList.reducer,
+  },
+});
+
+export default store;
