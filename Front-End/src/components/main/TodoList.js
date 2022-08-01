@@ -1,12 +1,3 @@
-import { View, Text } from "react-native";
-import TodoItem from "./TodoItem";
-import styles from "../../../app.module.css";
-
-export default function TodoList({ navigation }) {
-  return (
-    <View style={styles.two}>
-      <Text>TodoList.js</Text>
-      <TodoItem navigation={navigation} />
-    </View>
-  );
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ff21bef578631dc238ea78a4efd76cf99567fc560c4b5e1b1c73c44c6de2fe2b
+size 875
