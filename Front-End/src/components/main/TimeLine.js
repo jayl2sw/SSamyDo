@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:910ed5a367e3bd2374a56730dbd6b55c61223fa905ed6ff47105b1421163f6b8
-size 284
+import { View, Text } from "react-native";
+import TimeLineItem from "./TimeLineItem";
+import styles from "../../../app.module.css";
+
+export default function TimeLine() {
+  return (
+    <View style={styles.one}>
+      <Text>TimeLine.js</Text>
+      <TimeLineItem />
+    </View>
+  );
+}
