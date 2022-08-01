@@ -1,13 +1,3 @@
-package com.ssljjong.ssachedule.repository;
-
-import com.ssljjong.ssachedule.domain.Track;
-
-import java.util.List;
-
-public interface TrackRepository {
-
-    public void save(Track track);
-    public Track findOne(Long id);
-    public List<Track> findAll();
-    public Track findTrack(int gisu, String trackName);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f79c95ea3b3dc4036bed83d20c7976cd10e5cbe3ffeb679367763e9d39e8fa86
+size 326
