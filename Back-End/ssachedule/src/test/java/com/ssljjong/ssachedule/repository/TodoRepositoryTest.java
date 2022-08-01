@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:09000fbdb1ba935e4e18d2e762d3ad56284d9e1b2c3c74a71b20765021c89054
-size 414
+package com.ssljjong.ssachedule.repository;
+
+import com.ssljjong.ssachedule.entity.Todo;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import javax.transaction.Transactional;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+@SpringBootTest
+@Transactional
+class TodoRepositoryTest {
+
+    @Autowired TodoRepository todoRepository;
+
+
+}
