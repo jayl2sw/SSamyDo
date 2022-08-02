@@ -1,14 +1,3 @@
-import { View, Text, Button } from "react-native";
-import styles from "../../../app.module.css";
-
-export default function ScheduleItem({ navigation }) {
-  return (
-    <View style={[styles.two, { flexDirection: "row" }]}>
-      <Text>ScheduleItem.js</Text>
-      <Button
-        title="Detail"
-        onPress={() => navigation.navigate("ScheduleDetail")}
-      />
-    </View>
-  );
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7b4df6878ba28ec13a8ccc47fbb1f0d7eeb4818d07006e31092d26bf5383afa8
+size 331

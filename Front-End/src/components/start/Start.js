@@ -1,18 +1,3 @@
-import { View, Text, Button } from "react-native";
-import styles from "../../../app.module.css";
-
-function Start({ navigation }) {
-  return (
-    <View style={styles.back}>
-      <Text style={styles.ssamydo}>SSAMY DO!</Text>
-      <Button title="Main" onPress={() => navigation.navigate("TabNav")} />
-      <Button
-        title="redux 예시"
-        onPress={() => navigation.navigate("example")}
-      />
-      <Text style={styles.container}></Text>
-    </View>
-  );
-}
-
-export default Start;
+version https://git-lfs.github.com/spec/v1
+oid sha256:cdfb8ee7fbf17eeeaf71d8ae24206d93c3d0f53f03bcbef799e76d743adc9f4d
+size 513

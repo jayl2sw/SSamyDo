@@ -1,16 +1,3 @@
-import { View, Text, Button } from "react-native";
-import styles from "../../../app.module.css";
-import CustomCalendar from "./CustomCalendar";
-
-export default function Month() {
-  return (
-    <View>
-      <View style={[{ flexDirection: "row", margin: 5 }]}>
-        <Button title="싸피" />
-        <Button title="스터디" />
-        <Button title="개인일정" />
-      </View>
-      <CustomCalendar />
-    </View>
-  );
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1ce0660b48491457cfa8d4bef6bbc319642c3554ec4a235ff70edd64ab5d3aed
+size 1362
