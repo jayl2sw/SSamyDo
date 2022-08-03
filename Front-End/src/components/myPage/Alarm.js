@@ -1,10 +1,3 @@
-import { View, Text } from "react-native";
-import styles from "../../../app.module.css";
-
-export default function Alarm() {
-  return (
-    <View>
-      <Text>Alarm.js</Text>
-    </View>
-  );
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9ccd44094fe0e5e210c31b073f9f56b071d4f9c8b8149696230742ccdbfdf159
+size 193
