@@ -1,10 +1,3 @@
-import { View, Text } from "react-native";
-import styles from "../../../app.module.css";
-
-export default function MMLogin() {
-  return (
-    <View>
-      <Text>MMLogin.js</Text>
-    </View>
-  );
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ecbb8c1fc01475e6e6ff79fd9073834694bd0c27ca02f380748cf71954b7b311
+size 207
