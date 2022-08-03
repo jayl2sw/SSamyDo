@@ -1,12 +1,3 @@
-import { View, Text } from "react-native";
-import NoticeItem from "./NoticeItem";
-import styles from "../../../app.module.css";
-
-export default function NoticeList({ navigation }) {
-  return (
-    <View style={styles.one}>
-      <Text>NoticeList.js</Text>
-      <NoticeItem navigation={navigation} />
-    </View>
-  );
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fe6802acbf30b16cdd4eed01d1ef689ceded9c049177136232b5ca1f92353210
+size 320

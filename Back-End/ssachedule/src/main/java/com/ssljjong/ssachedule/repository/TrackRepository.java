@@ -1,24 +1,3 @@
-package com.ssljjong.ssachedule.repository;
-
-import com.ssljjong.ssachedule.entity.Track;
-import com.ssljjong.ssachedule.entity.UserDomain;
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import java.util.List;
-
-public interface TrackRepository extends JpaRepository<Track, Long> {
-
-    /**
-     * * find Track By Track_Name and Gi
-     *
-     * @param trackName
-     * @param gi
-     * @return Track Object
-     */
-    Track findTrackByNameAndGi(String name, int gi);
-
-
-
-
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9738fe8b2ea3f233077759c3ee0afb5a58ee04baf904aa9c60e2b60bea27128b
+size 491
