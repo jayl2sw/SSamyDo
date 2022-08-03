@@ -1,14 +1,3 @@
-import { View, Text, Button } from "react-native";
-import Aggrement from "./Aggrement";
-import Verification from "./Verification";
-import styles from "../../../app.module.css";
-
-export default function SignIn({ navigation }) {
-  return (
-    <View>
-      <Text>SignIn.js</Text>
-      <Aggrement />
-      <Verification />
-    </View>
-  );
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0a93ae9bd27d6945f32b92ff970cb560ef3636f6a0f6178ddb51e138673d09f6
+size 354
