@@ -1,10 +1,3 @@
-import { View, Text } from "react-native";
-import styles from "../../../app.module.css";
-
-export default function TodoDetail() {
-  return (
-    <View style={styles.center}>
-      <Text>TodoDetail.js</Text>
-    </View>
-  );
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:34a877f032010a6a203041cd3b2675e534d8b82fdfbedc28e9752985559776cb
+size 235
