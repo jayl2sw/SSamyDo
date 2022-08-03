@@ -1,12 +1,3 @@
-import { View, Text } from "react-native";
-import TimeLineItem from "./TimeLineItem";
-import styles from "../../../app.module.css";
-
-export default function TimeLine() {
-  return (
-    <View style={styles.one}>
-      <Text>TimeLine.js</Text>
-      <TimeLineItem />
-    </View>
-  );
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:593e0d2d253d15b9d5053c8c123bcb6faad4e814d570d5032a69a2a38c2c2e11
+size 296
