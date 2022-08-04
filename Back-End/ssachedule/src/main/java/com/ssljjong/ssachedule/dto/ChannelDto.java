@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:94c03d834f5e8c821f358e341c77f9b4a139de0964e1fb272daa47d380eaf59f
-size 512
+package com.ssljjong.ssachedule.dto;
+
+import lombok.Data;
+
+@Data
+public class ChannelDto {
+
+    private Long id;
+    private String name;
+    private boolean critical;
+
+    public ChannelDto(Long id) {
+        this.id = id;
+    }
+
+    public ChannelDto(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public ChannelDto(Long id, String name, boolean critical) {
+        this.id = id;
+        this.name = name;
+        this.critical = critical;
+    }
+}
