@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7b4352efe71e390c390fce212b8b31adbff36cc6e57586f7c6d41b991ccc3229
-size 454
+package com.example.demo.service;
+
+import java.io.FileNotFoundException;
+import java.util.Map;
+
+import org.springframework.core.io.FileSystemResource;
+import org.springframework.http.HttpHeaders;
+
+public interface ImageService {
+    Map<String, Object> getImage(String fileName) throws FileNotFoundException;
+
+    FileSystemResource getResource(String fileName) throws FileNotFoundException;
+
+    HttpHeaders getHeader(String fileName);
+}

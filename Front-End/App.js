@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f46c6154639e5a70ba1955ba861cbeec8ff0010d47091b087987c8ad0f9ba0d5
-size 507
+import { NavigationContainer } from "@react-navigation/native";
+import { StatusBar } from "react-native";
+import MyStack from "./src/router/StackNavigater";
+import styles from "./app.module.css";
+import { Provider } from "react-redux";
+import store from "./src/store/store";
+
+export default function App() {
+  return (
+    <Provider store={store}>
+      <NavigationContainer style={styles.back}>
+        <StatusBar />
+        <MyStack />
+      </NavigationContainer>
+    </Provider>
+  );
+}
