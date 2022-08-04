@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7fa0fc9c0be2f075c6cd501633cd85b989f0909eab0aadb97d4894c674935f80
-size 133
+node_modules/
+.expo/
+dist/
+npm-debug.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+
+# macOS
+.DS_Store
