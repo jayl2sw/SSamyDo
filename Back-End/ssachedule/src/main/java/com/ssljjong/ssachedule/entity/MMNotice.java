@@ -1,15 +1,3 @@
-package com.ssljjong.ssachedule.entity;
-
-import lombok.*;
-
-import javax.persistence.*;
-
-@Entity
-@Getter
-@DiscriminatorValue("M")
-public class MMNotice extends Notice {
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "channel_id")
-    private Channel channel;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6811e2153e74d4b88c8438eb435ea20f5967312db52ad19cd6a339aa44c41322
+size 570
