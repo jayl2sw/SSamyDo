@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7f400665c66f62643fc101b9fb1fb105d8717c1b00ecbff225f0d9dc470b35b0
-size 385
+from django.db import models
+
+# Create your models here.
+class Notice(models.Model):
+    channel_id = models.CharField(max_length=255)
+    title = models.CharField(max_length=255)
+    file_ids = models.CharField(max_length=255)
+    description = models.CharField(max_length=1023)
+    date = models.DateTimeField(auto_now_add=True)
+    
+    def __str__(self):
+        return self.title

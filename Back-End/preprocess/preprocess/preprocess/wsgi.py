@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6d1d9f3ac87ddcfc05b9ab9213707879c8c893ae095e56488009e5644d0ce52f
-size 397
+"""
+WSGI config for preprocess project.
+
+It exposes the WSGI callable as a module-level variable named ``application``.
+
+For more information on this file, see
+https://docs.djangoproject.com/en/3.2/howto/deployment/wsgi/
+"""
+
+import os
+
+from django.core.wsgi import get_wsgi_application
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'preprocess.settings')
+
+application = get_wsgi_application()
