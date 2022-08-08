@@ -1,12 +1,3 @@
-import { View, Text, Button } from "react-native";
-import styles from "../../../app.module.css";
-
-export default function ScheduleItem(props) {
-  const { navigation } = props;
-  const { todo } = props;
-  return (
-    <View style={[styles.two, { flexDirection: "row" }]}>
-      <Text>{todo.id}</Text>
-    </View>
-  );
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:501f5cbda2bdb1ecb190d3462142e93959b000473dbc3f842b5ca415dec1057f
+size 2346
