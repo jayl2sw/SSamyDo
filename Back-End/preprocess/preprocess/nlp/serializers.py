@@ -1,9 +1,3 @@
-from dataclasses import field
-from rest_framework import serializers
-from .models import Notice
-
-class NoticeSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = Notice
-        fields = "file_ids", "title", "description", "channel_id", "date"
+version https://git-lfs.github.com/spec/v1
+oid sha256:f3dbd769522317f45723a1cb2aa6c0736825dd77f2764a665aa1749343f7db1f
+size 271

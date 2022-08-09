@@ -1,25 +1,3 @@
-package com.ssljjong.ssachedule.entity;
-
-import javax.persistence.*;
-import java.sql.Timestamp;
-import java.time.LocalDate;
-
-@Entity
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "source")
-public abstract class Notice {
-
-    @Id
-    @GeneratedValue
-    @Column(name = "notice_id")
-    private Long id;
-
-    private String title;
-    private String description;
-    private Timestamp date;
-    private String file;
-
-
-
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:44de4a2d670d89dc741d038cd12a0032f2be06a86b971c86cc364b6c1688a8aa
+size 481
