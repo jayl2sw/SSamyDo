@@ -1,12 +1,3 @@
-from django.db import models
-
-# Create your models here.
-class Notice(models.Model):
-    channel_id = models.CharField(max_length=255)
-    title = models.CharField(max_length=255)
-    file_ids = models.CharField(max_length=255)
-    description = models.CharField(max_length=1023)
-    date = models.DateTimeField(auto_now_add=True)
-    
-    def __str__(self):
-        return self.title
+version https://git-lfs.github.com/spec/v1
+oid sha256:5e86297e78351c0f3c75b2b4aab5e65e84b16baffa23d34aa236df1e2bc55158
+size 883
