@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3d23211bd1285238ffb77a00f0d1192d686a02a257f9781652e2dad67204f2c6
-size 479
+import { createSlice } from "@reduxjs/toolkit";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+
+export default Account = createSlice({
+  name: "Account",
+  initialState: { id: "", eduPassword: "", MMpassword: "", Tokken: "" },
+  reducers: {
+    import(state, action) {
+      state = action.payload;
+    },
+    // secureStorage 사용해서 추가
+    save(state) {
+      AsyncStorage.setItem("User", JSON.stringify(state));
+    },
+  },
+});
