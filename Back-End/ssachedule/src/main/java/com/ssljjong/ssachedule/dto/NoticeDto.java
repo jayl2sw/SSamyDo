@@ -1,20 +1,3 @@
-package com.ssljjong.ssachedule.dto;
-
-import lombok.Data;
-
-import java.sql.Timestamp;
-
-@Data
-public class NoticeDto {
-    private Long id;
-    private String title;
-    private String description;
-    private String date;
-
-    public NoticeDto(Long id, String title, String description, String date) {
-        this.id = id;
-        this.title = title;
-        this.description = description;
-        this.date = date;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fa64fdd854d2ef7790d1cba929d31329b17940365e9f2ed8f2f699b753148767
+size 446
