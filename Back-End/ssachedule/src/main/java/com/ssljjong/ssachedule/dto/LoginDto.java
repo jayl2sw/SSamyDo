@@ -1,21 +1,3 @@
-package com.ssljjong.ssachedule.dto;
-
-import lombok.Builder;
-import lombok.Data;
-
-import javax.validation.constraints.NotNull;
-
-@Data
-@Builder
-public class LoginDto {
-
-    @NotNull
-    private String username;
-
-    @NotNull
-    private String password;
-
-    @NotNull
-    private String eduPw;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:72780055fc32c50865317ce6493115064393bdac4edbaa15da8f5a1fd3d9bb1c
+size 484
