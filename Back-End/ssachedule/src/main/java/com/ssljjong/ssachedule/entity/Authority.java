@@ -1,23 +1,3 @@
-package com.ssljjong.ssachedule.entity;
-
-import lombok.*;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
-
-@Entity
-@Table(name = "authority")
-@Getter
-@Setter
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
-public class Authority {
-
-    @Id
-    @Column(name = "authority_name", length = 50)
-    private String authorityName;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6e9409651d74ced8387a40b4a96981aab654f527f10d8d4d27359afd1b45e704
+size 523
