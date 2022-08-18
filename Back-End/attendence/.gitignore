@@ -1,3 +1,5 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:616d3aceb714f03daa7bc873284914298a51ba0ca73a41ec0ad8c18e92baf7ca
-size 108
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build
