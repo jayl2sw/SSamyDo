@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:86f21a7c7e6640438847dac4886655d0cb8a924f75ff3b16a9f9535fff3f8611
-size 373
+package com.ssljjong.ssachedule.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.ssljjong.ssachedule.entity.Lunch;
+
+public interface LunchRepository extends JpaRepository<Lunch, Integer> {
+
+    List<Lunch> findByDate(String date);
+
+    List<Lunch> findByDateBetween(String start, String end);
+
+}
