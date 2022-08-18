@@ -1,15 +1,3 @@
-package com.ssljjong.ssachedule.service;
-
-import com.ssljjong.ssachedule.entity.User;
-
-import java.util.Optional;
-
-public interface UserServiceBackup {
-    public String checkAccount(User user);
-    public void addTeam(User user);
-    public void setTrack(User user);
-    public Optional<User> getUser(String userEmail);
-
-
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:eec071cea54a393d2d51199eed56acb16c8563cedb504f862f09cfe57d47e3f3
+size 326

@@ -1,20 +1,3 @@
-package com.ssljjong.ssachedule.dto;
-
-import com.ssljjong.ssachedule.entity.Track;
-import lombok.Data;
-
-@Data
-public class WeeklyPlanDto {
-
-    private Long id;
-    private String title;
-    private String date;
-    private String time;
-
-    public WeeklyPlanDto(Long id, String title, String date, String time) {
-        this.id = id;
-        this.title = title;
-        this.date = date;
-        this.time = time;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:361d9f4503be603af4004570e9ee1d534a65717418a1f3657e5940320495a534
+size 424
