@@ -1,16 +1,3 @@
-"""
-ASGI config for preprocess project.
-
-It exposes the ASGI callable as a module-level variable named ``application``.
-
-For more information on this file, see
-https://docs.djangoproject.com/en/3.2/howto/deployment/asgi/
-"""
-
-import os
-
-from django.core.asgi import get_asgi_application
-
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'preprocess.settings')
-
-application = get_asgi_application()
+version https://git-lfs.github.com/spec/v1
+oid sha256:7f04ba71e987d06ea25430436c8fa27ec04b266c11bf52193fe7fec6ad501d9a
+size 413
