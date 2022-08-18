@@ -1,17 +1,3 @@
-package com.ssljjong.ssachedule.service;
-
-import com.ssljjong.ssachedule.dto.ChannelDto;
-import com.ssljjong.ssachedule.entity.Channel;
-import com.ssljjong.ssachedule.entity.Team;
-import com.ssljjong.ssachedule.entity.User;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
-
-import java.util.List;
-
-public interface ChannelService {
-
-    public List<Channel> getChannelsByUser(User user);
-    public List<Channel> getChannelsByTeam(Team team);
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2c1ebdbb54d0819bcdc47d251fae2703349528d5aa6505ba0a910bcf58a68fe8
+size 524

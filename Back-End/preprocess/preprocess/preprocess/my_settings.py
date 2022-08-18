@@ -1,12 +1,3 @@
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'ssafy',
-        'USER': 'i7e204',                    
-        'PASSWORD': '000000',                
-        'HOST': 'localhost',   
-        'PORT': '3306',
-    }
-}
-
-SECRET_KEY = 'django-insecure-63(%4&jh-=@+z=c2w$!)3b0k5x=r&4=8xqcxt=ee77kg_0yqe+'
+version https://git-lfs.github.com/spec/v1
+oid sha256:b410b8ccfc790d68d1d10859f5b3718a1dba716df3062ba0f7fa802f19cf34f0
+size 354
