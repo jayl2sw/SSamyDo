@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8f06d22bc4d9f18e9095f499ed1326a82074b78709524ec32b11574744b70c20
-size 561
+package com.ssljjong.ssachedule.dto;
+
+import lombok.Data;
+
+@Data
+public class LunchDto {
+
+    private Integer id;
+    private String main;
+    private String detail;
+    private String img;
+    private String store;
+    private String date;
+
+    public LunchDto(Integer id, String main, String detail, String img, String store, String date) {
+        this.id = id;
+        this.main = main;
+        this.detail = detail;
+        this.img = img;
+        this.store = store;
+        this.date = date;
+    }
+}
