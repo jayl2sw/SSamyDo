@@ -1,26 +1,3 @@
-package com.ssljjong.ssachedule.entity;
-
-import lombok.*;
-
-import javax.persistence.*;
-import java.time.LocalDate;
-
-@Entity
-@Getter
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
-@ToString(of = {"id", "title", "type", "date"})
-@Table(name = "monthlyplan")
-public class MonthlyPlan {
-
-    @Id @GeneratedValue
-    @Column(name = "mp_id")
-    private Long id;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    private Track track;
-
-    private String title;
-    private String type;
-    private LocalDate date;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ecfa914e82b55c0cdb73530719233b3fc8e018393cb823342968a0a439c3b271
+size 854

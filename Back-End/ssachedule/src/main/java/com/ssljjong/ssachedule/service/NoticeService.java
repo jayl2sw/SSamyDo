@@ -1,16 +1,3 @@
-package com.ssljjong.ssachedule.service;
-
-import com.ssljjong.ssachedule.dto.NoticeDto;
-import com.ssljjong.ssachedule.entity.Notice;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Sort;
-
-import java.util.List;
-
-public interface NoticeService {
-
-    List<NoticeDto> findNoticesByPage(Integer page);
-    List<NoticeDto> findNoticesByOffsetAndSize(Integer offset, Integer size);
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b969062470a096947ddbea88546ba9908c309a9200affcbdba2611ad319832bc
+size 295
