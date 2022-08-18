@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:546a7300c570435b4dd4667204190d5e059c110f78eab8078ce91fda886f48fb
-size 955
+import { createSlice } from "@reduxjs/toolkit";
+
+const Notice = createSlice({
+  name: "Notice",
+  initialState: [[]],
+  reducers: {
+    import(state, action) {
+      state[0] = action.payload;
+    },
+  },
+});
+
+export default Notice;
