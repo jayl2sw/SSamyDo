@@ -1,11 +1,3 @@
-package com.ssljjong.ssachedule.repository;
-
-import com.ssljjong.ssachedule.domain.UserDomain;
-
-public interface UserRepository {
-    public void save(UserDomain userDomain);
-
-    public UserDomain findOne(String email);
-
-    public void updateOne(UserDomain userDomain);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9a295bdc36758b10b0bdec1b687acccf60d2d9c25f19cfb7b25dd3268178c264
+size 1443
