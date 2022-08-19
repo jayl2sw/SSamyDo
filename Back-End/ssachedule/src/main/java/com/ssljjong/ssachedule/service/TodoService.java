@@ -1,21 +1,3 @@
-package com.ssljjong.ssachedule.service;
-
-import java.util.List;
-
-import com.ssljjong.ssachedule.dto.TodoDto;
-import com.ssljjong.ssachedule.entity.Todo;
-
-public interface TodoService {
-    List<TodoDto> getTodosByUser(Long userId);
-
-    /**
-     * * Find Todos with due date after today based on User
-     *
-     * @param user UserDomain
-     * @return TodoDto List
-     */
-
-    List<TodoDto> getTodosByUserFromDate(Long userId, String dueDate);
-
-    List<Todo> getTodosFromDate();
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6847c17962cef889276c739ea99294e9e4b00eb58a7fd299a37eb3c47243f266
+size 506
