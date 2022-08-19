@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cf1fa98ddb6676957da3cf0d6867b55d3b4a9fca32be49e399312de92f539947
-size 192
+package com.ssljjong.ssachedule.service;
+
+import java.util.List;
+
+import com.ssljjong.ssachedule.dto.TeamDto;
+
+public interface TeamService {
+
+    List<TeamDto> getTeamsByUser(Long userId);
+}

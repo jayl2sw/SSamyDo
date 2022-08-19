@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6e300f9ba71b37d1292b01dab0e9017b704bfc9c0a6edae660fc5c443d9b23f1
-size 409
+package com.ssljjong.ssachedule.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.ssljjong.ssachedule.entity.WeeklyPlan;
+
+public interface WeeklyPlanRepository extends JpaRepository<WeeklyPlan, Long> {
+
+    List<WeeklyPlan> findWeeklyPlansByDateBetween(String startDate, String endDate);
+
+    List<WeeklyPlan> findWeeklyPlansByDate(String Date);
+}

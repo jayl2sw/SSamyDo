@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d1aaf333c5fd7828761827d5578907e3a644d073f8aaa0bd345fd3e53c960647
-size 183
+from django.urls import path
+from . import views
+
+app_name="nlp"
+
+urlpatterns = [
+    path('', views.preprocess),
+    path('todo/', views.make_todo),
+    path('push/', views.push)
+
+]
