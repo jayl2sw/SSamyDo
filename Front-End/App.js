@@ -1,3 +1,43 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8294b8fbc33c1ff6f56acb7435b765316301e08af27f1ccead69c1ed991b7af5
-size 1139
+import { NavigationContainer } from "@react-navigation/native";
+import { StatusBar, StyleSheet } from "react-native";
+import MyStack from "./src/router/StackNavigater";
+import { Provider } from "react-redux";
+import store from "./src/store/store";
+import { Provider as PaperProvider } from "react-native-paper";
+import { SafeAreaView } from "react-native-safe-area-context";
+import * as Notifications from "expo-notifications";
+
+Notifications.setNotificationHandler({
+  handleNotification: async () => ({
+    shouldShowAlert: true,
+    shouldPlaySound: false,
+    shouldSetBadge: true,
+  }),
+});
+
+export default function App() {
+  return (
+    <SafeAreaView style={styles.appcontainer}>
+      <Provider store={store}>
+        <PaperProvider>
+          <NavigationContainer style={styles.back}>
+            <StatusBar />
+            <MyStack />
+          </NavigationContainer>
+        </PaperProvider>
+      </Provider>
+    </SafeAreaView>
+  );
+}
+
+const styles = StyleSheet.create({
+  appcontainer: {
+    flex: 1,
+  },
+  back: {
+    flex: 1,
+    backgroundColor: "#ffffff",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});

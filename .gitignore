@@ -1,3 +1,109 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:63e1ad177d9bfd7f8dd2a38ff87ffce99d91a0be92bf1a6ef97ebd9f9caef8ef
-size 1490
+#############
+##  Front  ##
+#############
+
+node_modules/
+.expo/
+dist/
+npm-debug.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+
+# macOS
+.DS_Store
+
+
+############
+### Back ###
+############
+
+### venv ###
+# Virtualenv
+# http://iamzed.com/2009/05/07/a-primer-on-virtualenv/
+.Python
+[Bb]in
+[Ii]nclude
+[Ll]ib
+[Ll]ib64
+[Ll]ocal
+[Ss]cripts
+pyvenv.cfg
+.venv
+pip-selfcheck.json
+
+HELP.md
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+
+### Django ###
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+db.sqlite3-journal
+media
+
+### BackEnd ###
+
+### attendence ###
+./Back-End/attendence/app/build
+./Back-End/attendence/.gradle
+./Back-End/attendence/.vscode
+
+### edussafycrawlergradle ###
+./Back-End/edussafycrawlergradle/app/build
+./Back-End/edussafycrawlergradle/.vscode
+./Back-End/edussafycrawlergradle/.gradle
+
+### imageServer ### 
+./Back-End/imageServer/demo/.gradle
+./Back-End/imageServer/demo/bin
+./Back-End/imageServer/demo/build
+./Back-End/imageServer/demo
+
+### ssachedule ###
+./Back-End/ssachedule/.gradle
+./Back-End/ssachedule/.vscode
+./Back-End/ssachedule/bin
+./Back-End/ssachedule/build

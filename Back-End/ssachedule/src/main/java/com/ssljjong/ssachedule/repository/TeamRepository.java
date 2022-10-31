@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e8ca0366153afd9639d3e2fb4fab253c7c429580fd6f8dddcf6f1273132ee4cf
-size 680
+package com.ssljjong.ssachedule.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+
+import com.ssljjong.ssachedule.entity.Team;
+
+public interface TeamRepository extends JpaRepository<Team, String> {
+
+    /**
+     * * find Teams by userEmail
+     *
+     * @param userEmail mattermost email
+     * @return List of Teams given user belongs to
+     */
+
+    @Query("select t from Team t join TeamUser tu join tu.user u" +
+            " where u.id = :userId")
+    List<Team> findTeamsByUser(@Param("userId") Long userId);
+
+
+
+
+}

@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b3f9423dae9afb7ef0fb7684c7c76163153f860b235dd8658e9ca1e86952187a
-size 665
+package com.ssljjong.ssachedule.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+@Entity
+@Getter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@ToString(of = { "id", "title", "date" })
+@Table(name = "weeklyplan")
+public class WeeklyPlan {
+        @Id
+        @GeneratedValue
+        @Column(name = "wp_id")
+        private Long id;
+
+        private String title;
+        private String date;
+        private String time;
+
+}

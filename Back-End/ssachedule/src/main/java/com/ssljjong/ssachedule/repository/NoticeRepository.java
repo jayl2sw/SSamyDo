@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c6ba5180bf3df024d4c38251d75a8b7492de7924dbb370a04e2630ac4a4ec1f5
-size 733
+package com.ssljjong.ssachedule.repository;
+
+import java.util.List;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+
+import com.ssljjong.ssachedule.entity.Notice;
+
+public interface NoticeRepository extends JpaRepository<Notice, Integer> {
+
+    @Query("select n from Notice n join fetch Channel c" +
+            " join c.team t join t.teamUsers tu join tu.user u where u.id = :userId")
+    List<Notice> findNoticesByUser(@Param("userId") Long userId);
+
+    @Override
+    Page<Notice> findAll(Pageable pageable);
+
+}

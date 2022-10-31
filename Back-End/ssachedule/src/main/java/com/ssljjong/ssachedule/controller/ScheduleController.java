@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c4cf41a41b4ffa3f138544bb39d3a829dae90b0114bea202b8ecc3c578232032
-size 580
+package com.ssljjong.ssachedule.controller;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.ssljjong.ssachedule.entity.WeeklyPlan;
+
+import lombok.RequiredArgsConstructor;
+
+@RestController
+@RequestMapping("/api/schedule")
+@RequiredArgsConstructor
+public class ScheduleController {
+
+  @GetMapping("/week")
+  public ResponseEntity<WeeklyPlan> getWeekSchedule() {
+    return null;
+  }
+}

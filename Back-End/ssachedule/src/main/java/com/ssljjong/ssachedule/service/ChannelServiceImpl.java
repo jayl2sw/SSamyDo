@@ -1,3 +1,31 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:84b6886b4a5f44d19b16a0e0063023f19e54816cd2e24d09adae652b387744dd
-size 796
+package com.ssljjong.ssachedule.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.ssljjong.ssachedule.entity.Channel;
+import com.ssljjong.ssachedule.entity.Team;
+import com.ssljjong.ssachedule.entity.User;
+import com.ssljjong.ssachedule.repository.ChannelRepository;
+
+import lombok.RequiredArgsConstructor;
+
+@Service
+@Transactional(readOnly = true)
+@RequiredArgsConstructor
+public class ChannelServiceImpl implements ChannelService {
+
+    private final ChannelRepository channelRepository;
+
+    @Override
+    public List<Channel> getChannelsByUser(User user) {
+        return null;
+    }
+
+    @Override
+    public List<Channel> getChannelsByTeam(Team team) {
+        return null;
+    }
+}

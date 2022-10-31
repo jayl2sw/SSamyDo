@@ -1,3 +1,52 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c9be92e5696add259c7d1749297596ef67dc899b683e00f121948cb6bb852d20
-size 1353
+package com.ssljjong.ssachedule.dto;
+
+import java.util.Set;
+import java.util.stream.Collectors;
+
+import javax.validation.constraints.NotNull;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.ssljjong.ssachedule.entity.User;
+
+import lombok.Builder;
+import lombok.Data;
+
+@Data
+@Builder
+public class UserDto {
+
+    @NotNull
+    private String username;
+
+    @NotNull
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    private String password;
+
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    private String eduPw;
+
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    private String trackName;
+
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    private Integer gi;
+
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    private String fcmToken;
+
+    private Set<AuthorityDto> authorityDtoSet;
+
+    public static UserDto from(User user) {
+        if (user == null)
+            return null;
+
+        return UserDto.builder()
+                .username(user.getUsername())
+                .eduPw(user.getEduPw())
+                .authorityDtoSet(user.getAuthorities().stream()
+                        .map(authority -> AuthorityDto.builder().authorityName(authority.getAuthorityName()).build())
+                        .collect(Collectors.toSet()))
+                .build();
+    }
+
+}

@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c11a284c48416d15517a87a33bd961357a9dd5364c0b9b78608ffc844f584029
-size 769
+package com.ssljjong.ssachedule.jwt;
+
+import java.io.IOException;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.web.AuthenticationEntryPoint;
+import org.springframework.stereotype.Component;
+
+@Component
+public class JwtAuthenticationEntryPoint implements AuthenticationEntryPoint {
+
+    @Override
+    public void commence(HttpServletRequest request,
+            HttpServletResponse response,
+            AuthenticationException authException) throws IOException {
+        // 유효한 자격증명을 제공하지 않고 접근하려 할때 401
+        response.sendError(HttpServletResponse.SC_UNAUTHORIZED);
+    }
+}

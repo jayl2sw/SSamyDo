@@ -1,3 +1,33 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9e3caccc520b9747aad8da6214b0b6db229a42b3410b3f2e7210b005bed81fe8
-size 923
+package com.ssljjong.ssachedule.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+
+import com.ssljjong.ssachedule.entity.Channel;
+import com.ssljjong.ssachedule.entity.Team;
+
+public interface ChannelRepository extends JpaRepository<Channel, String> {
+
+    /**
+     * * find Channel List by UserId
+     *
+     * @param UserId
+     * @return ChannelDtoList (
+     */
+    @Query("select c from Channel c join fetch c.team join TeamUser tu join User u" +
+            " where u.id = :userId")
+    List<Channel> findChannelsByUser(@Param("userId") Long userId);
+
+    /**
+     * * find Channel List by UserId
+     *
+     * @param UserId
+     * @return ChannelDtoList
+     */
+    List<Channel> findChannelsByTeam(Team team);
+
+    Channel findChannelByName(String name);
+}

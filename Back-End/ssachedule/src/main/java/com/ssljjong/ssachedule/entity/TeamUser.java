@@ -1,3 +1,52 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d43f5c654ce500e3b8b5c00b7aa42181b24491ac2d33987436b8f8f50559562d
-size 1088
+package com.ssljjong.ssachedule.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+@Entity
+@Getter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@ToString(of = { "id" })
+public class TeamUser {
+
+    // Attributes
+    @Id
+    @GeneratedValue
+    @Column(name = "id")
+    private Long id;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "team_id")
+    private Team team;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private User user;
+
+    // Constructors
+    public TeamUser(User user) {
+        this.user = user;
+    }
+
+    public TeamUser(Team team, User user) {
+        this.team = team;
+        this.user = user;
+    }
+
+    // Relationship Methods
+
+    public void setTeam(Team team) {
+        this.team = team;
+    }
+
+}

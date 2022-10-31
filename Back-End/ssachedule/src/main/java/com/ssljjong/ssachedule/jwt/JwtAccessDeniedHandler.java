@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f09ac4009202cd2ef657740d9e89c5728b7ac12f26bbbb3fd1145f3a33b99391
-size 731
+package com.ssljjong.ssachedule.jwt;
+
+import java.io.IOException;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.security.access.AccessDeniedException;
+import org.springframework.security.web.access.AccessDeniedHandler;
+import org.springframework.stereotype.Component;
+
+@Component
+public class JwtAccessDeniedHandler implements AccessDeniedHandler {
+
+    @Override
+    public void handle(HttpServletRequest request, HttpServletResponse response,
+            AccessDeniedException accessDeniedException) throws IOException {
+        // 필요한 권한이 없이 접근하려 할때 403
+        response.sendError(HttpServletResponse.SC_FORBIDDEN);
+    }
+}

@@ -1,3 +1,32 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a99e4095b56a3ca431fd2465621ab3f519124ae3d2c88567d9d60250e9911402
-size 742
+package com.ssljjong.ssachedule.dto;
+
+import com.ssljjong.ssachedule.entity.TodoType;
+
+import lombok.Builder;
+import lombok.Data;
+
+@Data
+@Builder
+public class TodoDto {
+
+    private Integer id;
+
+    private Integer noticeId;
+    private String title;
+    private String description;
+    private TodoType type;
+    private String startDate;
+    private String dueDate;
+
+    public TodoDto(Integer id, Integer noticeId, String title, String description, TodoType type, String startDate,
+            String dueDate) {
+        this.id = id;
+        this.noticeId = noticeId;
+        this.title = title;
+        this.description = description;
+        this.type = type;
+        this.startDate = startDate;
+        this.dueDate = dueDate;
+
+    }
+}

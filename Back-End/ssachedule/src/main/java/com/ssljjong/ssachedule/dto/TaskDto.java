@@ -1,3 +1,25 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:be3b3ab3b9c512426342ca698a9fe364bf845ba76461359c86f50ab3c5970ac2
-size 567
+package com.ssljjong.ssachedule.dto;
+
+import lombok.Data;
+
+@Data
+public class TaskDto {
+    String time;
+    String mainSubject;
+    String courseName;
+    String subject;
+    String name;
+    String classRoom;
+
+    public TaskDto() {
+    }
+
+    public TaskDto(String time, String mainSubject, String courseName, String subject, String name, String classRoom) {
+        this.time = time;
+        this.mainSubject = mainSubject;
+        this.courseName = courseName;
+        this.subject = subject;
+        this.name = name;
+        this.classRoom = classRoom;
+    }
+}

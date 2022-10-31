@@ -1,3 +1,48 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2cdacea1f6eab0d676c39322767d8d6845a6f188c21f2d4ed737648debe360ae
-size 1628
+plugins {
+	id 'org.springframework.boot' version '2.7.2'
+	id 'io.spring.dependency-management' version '1.0.12.RELEASE'
+	id 'java'
+}
+
+group = 'com.ssljjong'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '8'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.2'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'junit:junit:4.13.1'
+	compileOnly 'org.projectlombok:lombok'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	runtimeOnly 'mysql:mysql-connector-java'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'net.bis5.mattermost4j:mattermost4j-core:0.20.0'
+	implementation 'org.springframework.boot:spring-boot-starter-jersey'
+	implementation 'org.glassfish.jersey.core:jersey-client:2.35'
+	implementation 'com.fasterxml.jackson.datatype:jackson-datatype-hibernate5'
+	runtimeOnly 'com.h2database:h2'
+	implementation 'io.springfox:springfox-swagger2:2.9.2'
+	implementation 'io.springfox:springfox-swagger-ui:2.9.2'
+
+	implementation group: 'io.jsonwebtoken', name: 'jjwt-api', version: '0.11.2'
+	runtimeOnly group: 'io.jsonwebtoken', name: 'jjwt-impl', version: '0.11.2'
+	runtimeOnly group: 'io.jsonwebtoken', name: 'jjwt-jackson', version: '0.11.2'
+	
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

@@ -1,3 +1,45 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d2b00582ac98eed9a57140b343a9420be789753051b5026313fb8a17ef2c61e2
-size 1053
+package com.ssljjong.ssachedule.entity;
+
+import static javax.persistence.FetchType.LAZY;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+@Entity
+@Getter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@ToString(of = { "id", "name" })
+public class Channel {
+
+    @Id
+    @Column(name = "channel_id")
+    private String id;
+
+    private String name;
+
+    @ManyToOne(fetch = LAZY)
+    @JoinColumn(name = "team_id")
+    private Team team;
+
+    @OneToMany(mappedBy = "channel", cascade = CascadeType.ALL)
+    private List<MMNotice> notices = new ArrayList<>();
+
+    public Channel(String id, String name, Team team) {
+        this.id = id;
+        this.name = name;
+        this.team = team;
+    }
+}

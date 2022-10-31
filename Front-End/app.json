@@ -1,3 +1,39 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1c61d03020934be633dbcfb26352c6d455a7e830b3ee98fdcf0bdfed5f915c7a
-size 961
+{
+  "expo": {
+    "name": "SsamyDo",
+    "slug": "SsamyDo",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#E5F3F6"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.ssljjong.ssachedule",
+      "googleServicesFile": "./google-services.json",
+      "permissions": ["CAMERA", "NOTIFICATIONS"],
+      "useNextNotificationsApi": true
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "packagerOpts": {
+      "config": "metro.config.js",
+      "sourceExts": ["js", "jsx", "css"]
+    }
+  }
+}

@@ -1,3 +1,31 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b97366789883198e52363e50656a5544632dce9c177cbeb0cdecbb4e44c4e3c3
-size 1215
+import { createStackNavigator } from "@react-navigation/stack";
+import Start from "../components/start/Start";
+import SignIn from "../screens/SignIn";
+import NoticeDetail from "../components/notice/NoticeDetail";
+import MakeSchedule from "../components/calendar/MakeSchedule";
+import TodoItem from "../components/main/TodoItem";
+import NoticeSearch from "../components/notice/NoticeSearch";
+import MyTabs from ".";
+import Verification from "../components/signin/Verification";
+
+const Stack = createStackNavigator();
+
+export default function MyStack() {
+  return (
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+        headerTitleAlign: "center",
+      }}
+    >
+      <Stack.Screen name="Start" component={Start} />
+      <Stack.Screen name="TabNav" component={MyTabs} />
+      <Stack.Screen name="SignIn" component={SignIn} />
+      <Stack.Screen name="NoticeDetail" component={NoticeDetail} />
+      <Stack.Screen name="TodoItem" component={TodoItem} />
+      <Stack.Screen name="MakeSchedule" component={MakeSchedule} />
+      <Stack.Screen name="NoticeSearch" component={NoticeSearch} />
+      <Stack.Screen name="Verification" component={Verification} />
+    </Stack.Navigator>
+  );
+}
